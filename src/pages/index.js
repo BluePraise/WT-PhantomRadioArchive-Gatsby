@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+// import Image from "../components/image"
+// import SEO from "../components/seo"
 
 const IndexPage = () => {
 
@@ -25,9 +25,7 @@ const IndexPage = () => {
     return (
 
         <Layout>
-            {/*<Head title = "Posts" />*/}
-            <h1>A result of Phantom Radio Archive Posts.</h1>
-            <ul>
+            <ul className="playlist">
                 {
                     posts.allWordpressWpRadioposts.edges.map((edge) => {
                         return (

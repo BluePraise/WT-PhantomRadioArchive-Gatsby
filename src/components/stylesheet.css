@@ -65,8 +65,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-    {}
+h5 {}
 
 h1 {}
 
@@ -119,8 +118,10 @@ video {}
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: auto 300px;
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid; */
+    /* grid-template-columns: auto 300px; */
 }
 
 /* this has been set up for the loadfile.html */
@@ -134,11 +135,17 @@ video {}
     width: 500px;
 }
 
+header {
+    width: 100%;
+}
+
 main {
     border: 1px solid #000;
+    flex: 5;
 }
 
 aside {
+    flex: 1;
     position: sticky;
     height: 100vh;
     right: 0;
