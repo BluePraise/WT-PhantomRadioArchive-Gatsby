@@ -12,6 +12,7 @@ import Head from '../components/head'
 
 import Header from "./header"
 import Playbar from "./playbar"
+import Aside from "./aside"
 import "./layout.css"
 import "./stylesheet.css"
 
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
   return (
     <>
     <Head title = {data.site.siteMetadata.title} />
-    <div class="wrapper">
+    <div className="wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <main>
