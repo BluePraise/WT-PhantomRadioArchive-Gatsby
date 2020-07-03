@@ -30,10 +30,12 @@ const IndexPage = () => {
                     posts.allWordpressWpRadioposts.edges.map((edge) => {
                         return (
                             <li>
+                                <div className="play-toggle amplitude-play-pause">
+    					            <img className="play-pause icon-play" src="icon-play.svg" />
+                                    <img className="play-pause icon-pause" src="icon-pause.svg" />
+  					            </div>
                                 <Link to={edge.node.slug}>
                                     <h2>{edge.node.title}</h2>
-
-                                    <p>{edge.node.date}</p>
                                 </Link>
                             </li>
                         )
