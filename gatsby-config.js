@@ -12,7 +12,7 @@ module.exports = {
            * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
            * Example : 'demo.wp-api.org' or 'www.example-site.com'
            */
-          baseUrl: `app.mayconnect.local`,
+          baseUrl: `mayconnectapp.local`,
           // The protocol. This can be http or https.
           protocol: `http`,
           // Indicates whether the site is hosted on wordpress.com.
@@ -40,7 +40,7 @@ module.exports = {
             path: `${__dirname}/src/images`,
       },
     },
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -1,11 +1,10 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import IconPlay from "./icon-play"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
 
     const posts = useStaticQuery( graphql`
         query {
@@ -21,7 +20,6 @@ const IndexPage = () => {
         }
     `)
 
-
     return (
 
         <Layout>
@@ -31,8 +29,7 @@ const IndexPage = () => {
                         return (
                             <li>
                                 <div className="play-toggle amplitude-play-pause">
-    					            <img className="play-pause icon-play" src="icon-play.svg" />
-                                    <img className="play-pause icon-pause" src="icon-pause.svg" />
+                                    <IconPlay size={24} />
   					            </div>
                                 <Link to={edge.node.slug}>
                                     <h2>{edge.node.title}</h2>
@@ -48,5 +45,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-
