@@ -270,6 +270,18 @@ audio::-moz-media-controls-enclosure {
     outline: none;
 }
 
+button.play-button {
+    background: transparent;
+    border: none;
+}
+button.play-button:hover {
+    cursor: pointer;
+}
+
+button.play-button:focus {
+    outline: none;
+}
+
 .play-toggle {
     padding: 10px;
     border-right: 1px solid;
