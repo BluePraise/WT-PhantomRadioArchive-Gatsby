@@ -30,6 +30,7 @@ module.exports = {
                 "/*/*/media",
                 "/*/*/users",
           ],
+          verboseOutput: true
         }
     },
     `gatsby-plugin-react-helmet`,
