@@ -34,9 +34,9 @@ export default class TogglePlayPause extends Component {
     render() {
 
         return (
-
-            <button className="play-button" onClick={this.clickToPlay}><Icons icon={this.state.icon} /></button>
-
+            <div className="play-toggle">
+                <button className="play-button amplitude-play-pause" onClick={this.clickToPlay}><Icons icon={this.state.icon} /></button>
+            </div>    
         );
     }
 }

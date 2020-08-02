@@ -390,12 +390,12 @@ input[type=range]::-ms-thumb {
 
 
 
-.time--current {
+.time-current {
     display: inline-block;
     margin-right: 20px;
 }
 
-.time--duration {
+.time-duration {
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;

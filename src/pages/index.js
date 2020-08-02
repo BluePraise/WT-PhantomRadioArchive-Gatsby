@@ -1,11 +1,16 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import ReactAudioPlayer from 'react-audio-player'
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import TogglePlayPause from "../components/toggleplaypause"
+
+import TogglePlayPause from "../components/player/toggleplaypause"
+import AudioSession from "../components/player/audiosession"
+
+// import Amplitude from "../../node_modules/amplitudejs/dist/amplitude.js"
+
+import Style from "../components/stylesheet.css"
 
 const IndexPage = () => {
-
+    
     const posts = useStaticQuery( graphql`
         query {
             allWordpressWpRadioposts {
@@ -25,29 +30,35 @@ const IndexPage = () => {
     `)
 
     return (
-
+        
         <Layout>
+            
             <ul className="playlist">
                 {
-                    posts.allWordpressWpRadioposts.edges.map((edge) => {
-                        let audio_sourcefile = 
+                    posts.allWordpressWpRadioposts.edges.map((edge, key) => {
+                        
                         return (
+                            
                             <li>
-                                <div className="play-toggle amplitude-play-pause">
-                                    <TogglePlayPause />
-                                    // how to extract this?
-                                    <ReactAudioPlayer
-                                        src="${edge.node.acf.audio_file.source_url}"
-                                    />
-  					            </div>
-                                <Link to={edge.node.slug}>
-                                    <h2>{edge.node.title}</h2>
-                                </Link>
+                                <TogglePlayPause />
+                                <div className="session--info">
+  					                <p className="session--title">{edge.node.title}</p>
+                                    <div className="player">
+                                        <AudioSession source= { edge.node.acf.audio_file.source_url } />
+                                        
+                                    </div>
+                                </div>
+
+                                {/* <Link to={edge.node.slug}>
+                                    <h2>{</h2>
+                                </Link> */}
                             </li>
                         )
                     })
                 }
             </ul>
+
+
         </Layout>
     )
 
