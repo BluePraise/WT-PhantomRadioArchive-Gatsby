@@ -7,7 +7,7 @@ import AudioSession from "../components/player/audiosession"
 
 // import Amplitude from "../../node_modules/amplitudejs/dist/amplitude.js"
 
-import Style from "../components/stylesheet.css"
+
 
 const IndexPage = () => {
     

@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-
+import Style from "../stylesheet.css"
 
 export default class AudioSession extends Component {
 
     render() {
 
         return (
-                
+            <>    
             <audio className="session" preload="metadata" controls>
                 <source src={this.props.source} type="audio/mp3" />
             </audio>
@@ -16,6 +16,7 @@ export default class AudioSession extends Component {
                 <div class="play--cursor"></div>
             </div>
             <div class="time--duration"></div>
+            </>
         );
     }
 }

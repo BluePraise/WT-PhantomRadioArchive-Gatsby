@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Head from '../components/head'
 
 import Header from "./header"
-import Playbar from "./playbar"
 import Aside from "./aside"
 
 import "./stylesheet.css"
@@ -34,7 +33,6 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <main>
-            <Playbar />
             {children}
         </main>
         <Aside />
@@ -49,3 +47,5 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+
